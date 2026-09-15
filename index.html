@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmartCalc - a modern responsive calculator built from an open-source HTML, CSS and JavaScript calculator.">
+  <title>SmartCalc - Modern Calculator</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SMARTCALC</p>
+        <h1>Modern Calculator</h1>
+      </div>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <section class="calculator-layout">
+      <div class="calculator-card">
+        <div class="display-area">
+          <div id="expression" class="expression" aria-live="polite"></div>
+          <input id="display" class="display" type="text" value="0"
+                 aria-label="Calculator display" readonly>
+        </div>
+
+        <div class="status-row">
+          <span id="memoryStatus">Ready</span>
+          <button id="copyResult" class="text-btn" type="button">Copy result</button>
+        </div>
+
+        <div class="buttons" role="group" aria-label="Calculator buttons">
+          <button class="function" data-action="clear">AC</button>
+          <button class="function" data-action="delete">DEL</button>
+          <button class="function" data-action="percent">%</button>
+          <button class="operator" data-value="÷">÷</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button class="operator" data-value="×">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button class="operator" data-value="-">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button class="operator" data-value="+">+</button>
+
+          <button class="zero" data-value="0">0</button>
+          <button data-action="decimal">.</button>
+          <button class="equal" data-action="calculate">=</button>
+        </div>
+
+        <p class="keyboard-tip">Keyboard supported · Enter = calculate · Backspace = delete · Esc = clear</p>
+      </div>
+
+      <aside class="history-card">
+        <div class="history-header">
+          <div>
+            <p class="eyebrow">ACTIVITY</p>
+            <h2>History</h2>
+          </div>
+          <button id="clearHistory" class="text-btn danger" type="button">Clear</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="empty-history">
+            <span>🧮</span>
+            <p>No calculations yet</p>
+            <small>Your recent calculations will appear here.</small>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>Open-source educational modification · HTML5 · CSS3 · JavaScript</footer>
+  </main>
+  <script src="src/js/script.js"></script>
+</body>
+</html>
